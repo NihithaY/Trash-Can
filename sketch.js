@@ -6,7 +6,7 @@ const Body = Matter.Body;
 const Render = Matter.Render;
 var dustbinObj,groundObject	
 var world;
-var paper;
+
 var paperObject;
 
 
@@ -22,7 +22,7 @@ function setup() {
 	dustbinObj=new dustbin(1200,650);
 
 	//problem here
-	Paper = new paper(1000,600);
+	paperObject = new Paper(1000,600,15,15,5);
 
 	Engine.run(engine);
   
@@ -36,13 +36,13 @@ function draw() {
 
   groundObject.display();
   dustbinObj.display();
-  paper.display();
+  paperObject.display();
 
 }
 
 function keyPressed(){
 	if(keyCode === UP_ARROW){
-		Matter.Body.applyForce(paper.body,paper.body.position,{x:130,y:145});
+		Matter.Body.applyForce(paperObject.body,paperObject.body.position,{x:130,y:145});
 	}
 }
 

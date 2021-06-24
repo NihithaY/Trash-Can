@@ -23,9 +23,6 @@ class Paper{
     push()
     ImageMode(CENTER)
     image(this.image, 0, 0, this.width ,this.height )
-    ellipseMode(RADIUS);
-    ellipse(this.x, this.y, (this.r-40/2), options);
-
 
     pop()
     }
